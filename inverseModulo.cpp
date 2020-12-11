@@ -2,7 +2,7 @@ ll powm(ll x, unsigned int y)   // To compute x^y under modulo 1e7
 {
     if (y == 0)
         return 1;
-    ll p = power(x, y/2) % M;
+    ll p = powm(x, y/2) % M;
     p = (p * p) % M;
 
     return (y%2 == 0)? p : (x * p) % M;
@@ -12,6 +12,13 @@ ll inverseModulo(ll a)  // IF M is prime {Fermats’s little theorem}
 {
     return powm(a, M-2);
 }
+
+
+
+
+
+
+
 
 
 
